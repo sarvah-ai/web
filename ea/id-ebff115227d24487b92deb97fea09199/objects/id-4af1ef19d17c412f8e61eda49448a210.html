@@ -47,7 +47,12 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane active" id="documentation">
-						<div class="convertlinks documentation" style="white-space:pre-wrap">Decide the data endpoints </div>
+						<div class="convertlinks documentation" style="white-space:pre-wrap">&#9679;Goal: To devise an optimal FetchPlan to acquire high-quality, relevant data and to maintain an immutable ProvenanceLedger for every piece of information.
+&#9679;Enriched Responsibilities:
+&#9675;Dynamic Source Prioritization: The FetchPlan is not static. The agent prioritizes sources based on the query's context. For a query on iconography, it will prioritize Iconclass and scholarly articles. For attribution, it will prioritize museum APIs and catalogues raisonn&#233;s.
+&#9675;Query Formulation &amp; Adaptation: It generates precise, structured queries (e.g., SPARQL for Wikidata, specific API calls for the MET) tailored to each source. It can also adapt queries on the fly if an initial search yields poor results.
+&#9675;Comprehensive Provenance Tracking: The ProvenanceLedger is more than a list of URLs. It records the source's reliability score, the exact data snippet retrieved, any transformations applied (e.g., "normalized date from 'c. 1434' to '1434'"), and the data's license. This ensures full transparency and reproducibility.
+&#9675;Orchestration of Parallel Fetches: To ensure speed, it orchestrates parallel data retrieval requests, managing dependencies (e.g., first get the Wikidata ID for an artwork, then use that ID to query other databases).</div>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="properties">
 						<table class="table table-striped table-hover table-condensed">

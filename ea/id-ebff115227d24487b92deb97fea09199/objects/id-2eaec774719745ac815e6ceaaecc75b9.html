@@ -2,7 +2,7 @@
 <html class="frame" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>Interpretation</title>
+	<title>Interpreter Agent</title>
 
 	<!-- JQUERY -->
 	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
@@ -21,7 +21,7 @@
 
 		<div class="panel-heading root-panel-heading">
             <!-- Name -->
-               <b>Interpretation</b>
+               <b>Interpreter Agent</b>
 
             <!-- If a View with Viewpoint -->
 			   (<span class="i18n-elementtype-SketchModelSticky"></span>)
@@ -47,7 +47,12 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane active" id="documentation">
-						<div class="convertlinks documentation" style="white-space:pre-wrap">Understand the user's intent</div>
+						<div class="convertlinks documentation" style="white-space:pre-wrap">Goal: To translate ambiguous, multi-modal user input into a structured, machine-readable IntentBundle that captures the full context and nuance of the query.
+&#9679;Enriched Responsibilities:
+&#9675;Semantic Parsing: Goes beyond keywords to analyze the grammatical structure and semantic relationships in the user's text to infer the core question.
+&#9675;Multi-Modal Fusion: Correlates textual queries with data extracted from images. It identifies not just objects (e.g., "a dog") but also compositional relationships (e.g., "a dog at the feet of a couple") that are critical for context.
+&#9675;Profile-Based Contextualization: Uses the user's profile (familiarity level, language) to infer the required depth and complexity of the answer. For a novice, it might prioritize a clear, concise explanation; for an expert, it might highlight scholarly debates.
+&#9675;Intent Disambiguation: Actively identifies ambiguity (e.g., a symbol with multiple meanings) and flags it in the AmbiguityTokens output, preparing the system to either ask for clarification or present all possible interpretations.</div>
 					</div>
 					<div role="tabpanel" class="tab-pane" id="properties">
 						<table class="table table-striped table-hover table-condensed">
